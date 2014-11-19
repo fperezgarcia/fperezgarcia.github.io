@@ -273,25 +273,47 @@ I also tried removing highly correlated variables with findCorrelation process a
 <p>This is the confusion matrix of the model applied against test dataset.</p>
 
 <pre><code class="r">predictTest &lt;- predict(modFit,testing)
-table(predictTest, testing$classe)
+cm &lt;- confusionMatrix(data = predictTest, testing$classe)
+cm
 </code></pre>
 
-<pre><code>##            
-## predictTest    A    B    C    D    E
-##           A 2198   34    0    0    4
-##           B   20 1441   53    2   12
-##           C    9   35 1297   42   12
-##           D    4    3   15 1228   24
-##           E    1    5    3   14 1390
+<pre><code>## Confusion Matrix and Statistics
+## 
+##           Reference
+## Prediction    A    B    C    D    E
+##          A 2198   34    0    0    4
+##          B   20 1441   53    2   12
+##          C    9   35 1297   42   12
+##          D    4    3   15 1228   24
+##          E    1    5    3   14 1390
+## 
+## Overall Statistics
+##                                         
+##                Accuracy : 0.963         
+##                  95% CI : (0.958, 0.967)
+##     No Information Rate : 0.284         
+##     P-Value [Acc &gt; NIR] : &lt; 2e-16       
+##                                         
+##                   Kappa : 0.953         
+##  Mcnemar&#39;s Test P-Value : 1.43e-06      
+## 
+## Statistics by Class:
+## 
+##                      Class: A Class: B Class: C Class: D Class: E
+## Sensitivity             0.985    0.949    0.948    0.955    0.964
+## Specificity             0.993    0.986    0.985    0.993    0.996
+## Pos Pred Value          0.983    0.943    0.930    0.964    0.984
+## Neg Pred Value          0.994    0.988    0.989    0.991    0.992
+## Prevalence              0.284    0.193    0.174    0.164    0.184
+## Detection Rate          0.280    0.184    0.165    0.157    0.177
+## Detection Prevalence    0.285    0.195    0.178    0.162    0.180
+## Balanced Accuracy       0.989    0.968    0.966    0.974    0.980
 </code></pre>
 
-<pre><code class="r">tb&lt;- as.data.frame(table(predictTest, testing$classe))
-ok &lt;- sum(tb[tb$predictTest == tb$Var2,3])
-ko &lt;- sum(tb[tb$predictTest != tb$Var2,3])
-okPerc &lt;- (1 - ko / (ok - ko)) * 100
+<pre><code class="r">accuracy &lt;- cm$overall[[1]] * 100
 </code></pre>
 
-<p>The model is able to predict ok <strong>95.9791</strong>% of the cases</p>
+<p>The model has an accuracy of  <strong>96.2784</strong>% of the cases</p>
 
 <h3>Model detalis</h3>
 
