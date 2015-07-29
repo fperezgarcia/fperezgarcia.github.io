@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>Tutorials</title>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  <style type="text/css">
+    html,
+    body{
+      height: 100%;
+      margin: 0;
+      padding: 0;
+    }
+    
+    h1,
+    h2,
+    h3{
+      /* Fallback for web browsers that don't support RGBa */
+      background-color: rgb(0, 0, 0);
+      /* RGBa with 0.6 opacity */
+      background-color: rgba(0, 0, 0, 0.81);
+      /* For IE 5.5 - 7*/
+      filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000);
+      /* For IE 8*/
+      -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";
+      padding-top: 10px;
+      padding-right: 5px;
+      padding-bottom: 10px;
+      padding-left: 5px;
+    }
+    
+    h3{
+      font-size: 1.6em;
+    }
+    
+    .small-text{
+      font-size: .7em;
+      font-style: normal;
+      font-weight: normal;
+      margin-top: 5px;
+      color: lightgrey;
+    }
+    
+    small { 
+      font-size: smaller;
+      color: blue;
+    }
+    
+    .bottom-line{
+      padding-bottom: 10px;
+    }
+    
+    .align-top {
+      vertical-align: top; /* here */
+    }
+    
+    .carousel,
+    .item,
+    .active {
+      height: 100%;
+    }
+    
+    .carousel-inner {
+      height: 100%;
+    }
+    
+    .carousel {
+      margin-bottom: 0px;
+    }
+    
+    .carousel-caption {
+      z-index: 10;
+    }
+    
+    .carousel .item {
+      background-color: #777;
+    }
+    
+    .carousel .carousel-inner .bg {
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    
+    .carousel .carousel-inner .t1_sc1 {
+      background-image: url("https://nautkaapps.files.wordpress.com/2015/04/t1_sc11.png");
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center center;
+    }
+    
+    .carousel .carousel-inner .t1_sc2 {
+      background-image:url("https://nautkaapps.files.wordpress.com/2015/04/t1_sc2b.png");
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center center;
+    }
+    
+    .carousel .carousel-inner .carousel-image {
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center center;
+    }
+    
+    .carousel .carousel-inner .bg2 {
+      background-image: url(bg2.jpg);
+      background-position: center center;
+    }
+    
+    .carousel .carousel-inner .bg3 {
+      background-image: url(bg3.jpg);
+      background-position: center bottom;
+    }
+    
+    .menu-background {
+      background-color: #777;
+      !top: 0;
+      !position: absolute;
+      !z-index: 1; 
+    }
+    
+    .tutorial-container {
+      height: 100%;
+      top: 42px;
+      padding-bottom: 42px;
+    }
+    
+    .tutorial-image {
+      height: 100%;
+      position: absolute;
+      margin: 0 auto;
+      left: 0px;
+      right: 0px;
+      text-align: center;
+    }
+
+    
+  </style>
+</head>
+
+<body>
+  <!-- Barra de navegación -->
+  <ul class="nav nav-tabs navbar-inverse menu-background section">
+    <li role="presentation" class="dropdown">
+      <a class="dropdown-toggle btn-primary" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+        Menu <span class="caret"></span>
+      </a>
+      <ul class="dropdown-menu">
+        <li><a href="javascript:loadTutorial('tutorial1.html');">Navigate to a concrete point</a></li>
+        <li role="separator" class="divider"></li>
+        <li><a href="https://nautkaapps.wordpress.com/">Blog</a></li>
+      </ul>
+    </li>
+  </ul>
+  <!--<div id="hello" class="borrar">-->
+  <div id="tutorial-content"  class="tutorial-container">
+    Hola Mundo!!!
+  </div>
+  
+  <script>
+    function buttom_t1_sc1() {
+      $('#info_t1_sc1').show();
+    }
+    function loadTutorial(tutorial_file) {
+      jQuery.get(tutorial_file,function(data){
+        document.getElementById("tutorial-content").innerHTML = data;
+      });
+      document.reload(); 
+    }
+  </script>
+  
+</body>
+
+</html>
