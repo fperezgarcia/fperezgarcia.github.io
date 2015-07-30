@@ -2,9 +2,13 @@
 <ol class="carousel-indicators">
   <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
   <li data-target="#myCarousel" data-slide-to="1"></li>
+  <li data-target="#myCarousel" data-slide-to="2"></li>
+  <li data-target="#myCarousel" data-slide-to="3"></li>
+  <li data-target="#myCarousel" data-slide-to="4"></li>
 </ol>
-<!-- SCREEN 1 -->
+
 <div class="carousel-inner" role="listbox">
+  <!-- SCREEN 1 -->
   <div class="item bg carousel-image active">
     <div class="container">
       <img class="tutorial-image" 
@@ -12,14 +16,15 @@
         align="middle">
       <div class="carousel-caption">
         <h3>
-              Define Destination Point<br>
-              <small>
-                Create a waypoint with a long press over desired location
-              </small>
-            </h3>
+          Define Destination Point<br>
+          <p class="small-text">
+            Long press over desired location
+          </p>
+        </h3>
       </div>
     </div>
   </div>
+  
   <!-- SCREEN 2 -->
   <div class="item bg carousel-image">
     <div class="container">
@@ -28,25 +33,104 @@
         align="middle">
       <div class="carousel-caption">
         <h3>
-            Select as Destination<br>
-            <p class="small-text">
-              Click on "Sail to"
-            </p>
-          </h3>
+          Click on "Sail to"
+          <p class="small-text">
+            Selected location is now your destination
+          </p>
+        </h3>
         <div class="bottom-line">
-          <p><a class="btn btn-lg btn-primary" onclick="buttom_t1_sc1()" href="#" role="button">More</a></p>
-          <div class="alert alert-info collapse" id="info_t1_sc1">
+          <p><a class="btn btn-lg btn-primary" onclick="buttom_t1_sc1('#info_t1_sc2')" href="#" role="button">More</a></p>
+          <div class="alert alert-info collapse" id="info_t1_sc2">
             <a href="#" class="close" data-dismiss="alert">&times;</a>
             <span>
-                  <p>You can create waypoints with a long press over the map view.
-                      Then click "Destination"Sail to"
-                  </p>
-                </span>
+              <p>When you long press over a location you can:<br>
+                  - Define it as a Waypoint<br>
+                  - Select as destination<br>
+                  - Retrieve its weather forecast<br>
+                  - Calculate its distance to a waypoint<br>
+              </p>
+            </span>
           </div>
         </div>
       </div>
     </div>
   </div>
+  
+  <!-- SCREEN 3 -->
+  <div class="item bg carousel-image">
+    <div class="container">
+      <img class="tutorial-image" 
+        src="https://nautkaapps.files.wordpress.com/2015/04/t1_sc31.png" 
+        align="middle">
+      <div class="carousel-caption">
+        <h3>
+          Map View
+          <p class="small-text">
+            Change visualization options clicking in Info
+          </p>
+        </h3>
+      </div>
+    </div>
+  </div>
+  
+  <!-- SCREEN 4 -->
+  <div class="item bg carousel-image">
+    <div class="container">
+      <img class="tutorial-image" 
+        src="https://nautkaapps.files.wordpress.com/2015/04/t1_sc42.png" 
+        align="middle">
+      <div class="carousel-caption">
+        <h3>
+          Dashboard<br>
+          <p class="small-text">
+            Long click over a KPI to change it
+          </p>
+        </h3>
+        <div class="bottom-line">
+          <p><a class="btn btn-lg btn-primary" onclick="buttom_t1_sc1('#info_t1_sc4')" href="#" role="button">More</a></p>
+          <div class="alert alert-info collapse" id="info_t1_sc4">
+            <a href="#" class="close" data-dismiss="alert">&times;</a>
+            <span>
+              <p>There is a full explanation about KPIs on 
+              <a href="https://nautkaapps.wordpress.com/2013/12/13/the-fast-track-indicators/"
+                 target="_blank">The Fast Track Indicators</a>
+              </p>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- SCREEN 5 -->
+  <div class="item bg carousel-image">
+    <div class="container">
+      <img class="tutorial-image" 
+        src="https://nautkaapps.files.wordpress.com/2015/04/t1_sc5.png" 
+        align="middle">
+      <div class="carousel-caption">
+        <h3>
+          Navigation Tracker<br>
+          <p class="small-text">
+            Compare and select the best leg to destination
+          </p>
+        </h3>
+        <div class="bottom-line">
+          <p><a class="btn btn-lg btn-primary" onclick="buttom_t1_sc1('#info_t1_sc5')" href="#" role="button">More</a></p>
+          <div class="alert alert-info collapse" id="info_t1_sc5">
+            <a href="#" class="close" data-dismiss="alert">&times;</a>
+            <span>
+              <p>There is a full explanation about KPIs on 
+              <a href="https://nautkaapps.wordpress.com/2013/12/01/sailing-to-a-waypoint/"
+                 target="_blank">Sailing to a waypoint</a>
+              </p>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
 </div>
 <!-- Left and right controls -->
 <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
